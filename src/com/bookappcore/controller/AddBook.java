@@ -19,7 +19,7 @@ public class AddBook extends HttpServlet {
       
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		final PrintWriter print=response.getWriter();
-		Book book = new Book();
+		Book book = new Book(); 
 		book.setName(request.getParameter("name"));
 	    book.setPrice(Double.parseDouble(request.getParameter("price")));
 		BookDAO bookdao = new BookDAO();
